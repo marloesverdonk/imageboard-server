@@ -12,4 +12,13 @@ imageRouter.get(
   }
 )
 
+imageRouter.post(
+  '/image',
+  (request, response, next) => {
+    Image.create(request.body)
+      .then(image => response.json(image))
+      .catch(next)
+  }
+)
+
 module.exports = imageRouter
