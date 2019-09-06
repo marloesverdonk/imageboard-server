@@ -6,7 +6,7 @@ const databaseUrl =
 
 const db = new Sequelize(databaseUrl)
 db.sync()
-  .then(() => console.log('Database connected'))
+  .then(() => console.table({'Database connected': "whoohoo!"}))
   .catch(console.error)
 
 module.exports = db
