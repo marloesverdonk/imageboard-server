@@ -1,5 +1,6 @@
 const express = require('express')
 const db = require('./db')
+const Image = require('./model')
 
 const app = express()
 
